@@ -20,39 +20,56 @@
      • 知识盲点分析
      • 最优学习资料搜寻
      • 个性化学习建议
-============================================================
-🔬 材料科学智能问答系统
+
 ============================================================
 
-#前置准备
-1.pip install -r requirements.txt
+# 前置准备
+1.安装依赖库
+```bash
+pip install -r requirements.txt
+```
 2.安装启动lilvus(建议用docker compose安装启动，file文件夹中有yml文件)
 
-#使用方式
-##直接运行
-python main.py
 
+# 使用方式
+## 直接运行
+```bash
+python main.py
+```
 或
 
-##分步执行（解析pdf->导入到milvus->启动agent系统）
-###解析pdf
+## 分步执行（解析pdf->导入到milvus->启动agent系统）
+### 解析pdf
 1.将需要解析的文件放入pdf_file中
 2.在config.py中修改MinerU token和milvus配置
-3.运行：python parser_by_MinerU.py
+3.运行：
+```bash
+python parser_by_MinerU.py
 
-###将解析后的json、markdown和图片信息导入到milvus中
+### 将解析后的json、markdown和图片信息导入到milvus中
 1.启动milvus(需要先安装docker和docker compose)
+```bash
 cd file
 docker-compose -f milvus-standalone-docker-compose.yml up -d
+```
 2.按需将数据导入到milvus中
-2.1论文分段导入：python insert_milvus_paper.py
-2.2论文content导入：python insert_milvus_content.py
-2.3论文图片信息导入：python insert_milvus_figure.py
-
-###运行multi-agent对话系统
+2.1论文分段导入：
+```bash
+python insert_milvus_paper.py
+```
+2.2论文content导入：
+```bash
+python insert_milvus_content.py
+```
+2.3论文图片信息导入：
+```bash
+python insert_milvus_figure.py
+```
+### 运行multi-agent对话系统
+```bash
 python pdf_multi_agent.py
-
-使用样例：
+```
+# 使用样例：
 1.检索“通过竞争有序平衡实现单质金属的玻璃形成”的相关论文
 2.检索结果中的第一篇论文的结论是什么、创新点是什么、该论文有哪些可改进的地方
 3.如何理解**这个名词
