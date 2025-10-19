@@ -41,9 +41,9 @@ python main.py
 
 ## 分步执行（解析pdf->导入到milvus->启动agent系统）
 ### 1.解析pdf
-#### 1）将需要解析的文件放入pdf_file中
-#### 2）在config.py中修改MinerU token和milvus配置
-#### 3）运行：
+#### 1.1将需要解析的文件放入pdf_file中
+#### 1.2在config.py中修改MinerU token和milvus配置
+#### 1.3运行：
 ```bash
 python parser_by_MinerU.py
 ```
@@ -70,7 +70,7 @@ docker-compose -f milvus-standalone-docker-compose.yml up -d
 ```bash
 python pdf_multi_agent.py
 ```
-### 使用样例：
+#### 使用样例：
 ```bash
 1.检索“通过竞争有序平衡实现单质金属的玻璃形成”的相关论文
 2.检索结果中的第一篇论文的结论是什么、创新点是什么、该论文有哪些可改进的地方
