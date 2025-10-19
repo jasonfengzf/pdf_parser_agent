@@ -25,11 +25,11 @@
 
 
 # 前置准备
-1.安装依赖库
+### 1.安装依赖库
 ```bash
 pip install -r requirements.txt
 ```
-2.安装启动lilvus(建议用docker compose安装启动，file文件夹中有yml文件)
+### 2.安装启动lilvus(建议用docker compose安装启动，file文件夹中有yml文件)
 
 
 # 使用方式
@@ -41,9 +41,9 @@ python main.py
 
 ## 分步执行（解析pdf->导入到milvus->启动agent系统）
 ### 解析pdf
-1.将需要解析的文件放入pdf_file中
-2.在config.py中修改MinerU token和milvus配置
-3.运行：
+#### 1.将需要解析的文件放入pdf_file中
+#### 2.在config.py中修改MinerU token和milvus配置
+#### 3.运行：
 ```bash
 python parser_by_MinerU.py
 ```
