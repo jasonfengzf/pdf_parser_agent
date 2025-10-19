@@ -24,7 +24,7 @@
 ============================================================
 
 
-# 前置准备
+# 一、前置准备
 ### 1.安装依赖库
 ```bash
 pip install -r requirements.txt
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### 2.安装启动lilvus(建议用docker compose安装启动，file文件夹中有yml文件)
 
 
-# 使用方式
+# 二、使用方式
 ## 直接运行
 ```bash
 python main.py
