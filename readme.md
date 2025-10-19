@@ -23,6 +23,7 @@
 
 ============================================================
 
+
 # 前置准备
 1.安装依赖库
 ```bash
@@ -53,18 +54,18 @@ cd file
 docker-compose -f milvus-standalone-docker-compose.yml up -d
 ```
 2.按需将数据导入到milvus中
-2.1论文分段导入：
-```bash
-python insert_milvus_paper.py
-```
-2.2论文content导入：
-```bash
-python insert_milvus_content.py
-```
-2.3论文图片信息导入：
-```bash
-python insert_milvus_figure.py
-```
+  2.1论文分段导入：
+  ```bash
+  python insert_milvus_paper.py
+  ```
+  2.2论文content导入：
+  ```bash
+  python insert_milvus_content.py
+  ```
+  2.3论文图片信息导入：
+  ```bash
+  python insert_milvus_figure.py
+  ```
 ### 运行multi-agent对话系统
 ```bash
 python pdf_multi_agent.py
