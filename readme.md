@@ -46,23 +46,23 @@ python main.py
 3.运行：
 ```bash
 python parser_by_MinerU.py
-
+```
 ### 将解析后的json、markdown和图片信息导入到milvus中
-1.启动milvus(需要先安装docker和docker compose)
+#### 1.启动milvus(需要先安装docker和docker compose)
 ```bash
 cd file
 docker-compose -f milvus-standalone-docker-compose.yml up -d
 ```
-2.按需将数据导入到milvus中
-  2.1论文分段导入：
+#### 2.按需将数据导入到milvus中
+  ##### 2.1论文分段导入：
   ```bash
   python insert_milvus_paper.py
   ```
-  2.2论文content导入：
+  ##### 2.2论文content导入：
   ```bash
   python insert_milvus_content.py
   ```
-  2.3论文图片信息导入：
+  ##### 2.3论文图片信息导入：
   ```bash
   python insert_milvus_figure.py
   ```
@@ -70,12 +70,12 @@ docker-compose -f milvus-standalone-docker-compose.yml up -d
 ```bash
 python pdf_multi_agent.py
 ```
-# 使用样例：
-1.检索“通过竞争有序平衡实现单质金属的玻璃形成”的相关论文
-2.检索结果中的第一篇论文的结论是什么、创新点是什么、该论文有哪些可改进的地方
-3.如何理解**这个名词
-4.请针对论文研究的问题，帮我制定一个学习计划，并给出学习资料
-5.哪些论文提到了QCMP形成、找出与QCMP相关的图
+### 使用样例：
+##### 1.检索“通过竞争有序平衡实现单质金属的玻璃形成”的相关论文
+##### 2.检索结果中的第一篇论文的结论是什么、创新点是什么、该论文有哪些可改进的地方
+##### 3.如何理解**这个名词
+##### 4.请针对论文研究的问题，帮我制定一个学习计划，并给出学习资料
+##### 5.哪些论文提到了QCMP形成、找出与QCMP相关的图
 
 
 
