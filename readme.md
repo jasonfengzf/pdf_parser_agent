@@ -40,33 +40,33 @@ python main.py
 或
 
 ## 分步执行（解析pdf->导入到milvus->启动agent系统）
-### 解析pdf
-#### 1.将需要解析的文件放入pdf_file中
-#### 2.在config.py中修改MinerU token和milvus配置
-#### 3.运行：
+### 1.解析pdf
+#### 1）将需要解析的文件放入pdf_file中
+#### 2）在config.py中修改MinerU token和milvus配置
+#### 3）运行：
 ```bash
 python parser_by_MinerU.py
 ```
-### 将解析后的json、markdown和图片信息导入到milvus中
-#### 1.启动milvus(需要先安装docker和docker compose)
+### 2.将解析后的json、markdown和图片信息导入到milvus中
+#### 2.1启动milvus(需要先安装docker和docker compose)
 ```bash
 cd file
 docker-compose -f milvus-standalone-docker-compose.yml up -d
 ```
-#### 2.按需将数据导入到milvus中
-  ##### 2.1论文分段导入：
+#### 2.2按需将数据导入到milvus中
+  ##### 1)论文分段导入：
   ```bash
   python insert_milvus_paper.py
   ```
-  ##### 2.2论文content导入：
+  ##### 2)论文content导入：
   ```bash
   python insert_milvus_content.py
   ```
-  ##### 2.3论文图片信息导入：
+  ##### 3)论文图片信息导入：
   ```bash
   python insert_milvus_figure.py
   ```
-### 运行multi-agent对话系统
+### 3.运行multi-agent对话系统
 ```bash
 python pdf_multi_agent.py
 ```
